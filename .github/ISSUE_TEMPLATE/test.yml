@@ -1,4 +1,4 @@
-name: "Application Data Submission"
+name: "Tools/Application's Data Contribution"
 description: "Template for submitting data about tools/applications"
 title: "[Tool Name]: Feature Request"
 labels: ["Tools Contribution"]
@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Feature Template for Application Data Submission
+        ## Feature Template for Tools/Application's Data Contribution
 
   - type: input
     id: tool_name
@@ -81,12 +81,16 @@ body:
         - label: "IT professionals/Software developers"
         - label: "End users"
 
-  - type: input
+  - type: checkboxes
     id: user_interface
     attributes:
       label: "User Interface"
       description: "Describe the user interface of the tool."
-      placeholder: "e.g., web-based UI, graphical UI, command-line interface"
+      options:
+        - label: "web-based UI"
+        - label: "graphical UI"
+        - label: "command-line interface"
+
 
   - type: textarea
     id: user_interface_notes
