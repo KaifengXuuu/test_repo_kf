@@ -2,7 +2,6 @@ name: "Application Data Submission"
 about: "Template for submitting data about tools/applications"
 title: "[Tool Name]: Feature Request"
 labels: ["Tools Contribution"]
-assignees: ""
 body:
   - type: markdown
     attributes:
