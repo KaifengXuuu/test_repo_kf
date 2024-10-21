@@ -120,7 +120,7 @@ body:
     attributes:
       label: "Alternatives"
       description: "Identification of concrete examples of the use of tools in the construction sector/energy transition construction (e.g. funding indicators). "
-      placeholder: ""
+      placeholder: "e.g. R to Python"
 
   - type: input
     id: specific_use_cases
@@ -218,7 +218,7 @@ body:
       description: "What are the most important frameworks or libraries for implementation?"
       placeholder: "e.g., Django, React, Flask, Angular"
 
-  - type: Input
+  - type: input
     id: database_system
     attributes:
       label: "Database System"
