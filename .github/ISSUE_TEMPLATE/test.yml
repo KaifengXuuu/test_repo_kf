@@ -166,8 +166,8 @@ body:
       label: "Published"
       description: "Has the tool been officially released or published?"
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
 
   - type: input
     id: year_of_publication
@@ -182,8 +182,8 @@ body:
       label: "Publication planned"
       description: "Is a release/publication planned but not yet completed?"
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
 
   - type: textarea
     id: further_information
