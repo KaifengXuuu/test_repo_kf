@@ -166,8 +166,8 @@ body:
       label: "Published"
       description: "Has the tool been officially released or published?"
       options:
-        - label: "Yes"
-        - label: "No"
+        - Yes
+        - No
 
   - type: input
     id: year_of_publication
@@ -182,8 +182,8 @@ body:
       label: "Publication planned"
       description: "Is a release/publication planned but not yet completed?"
       options:
-        - label: "Yes"
-        - label: "No"
+        - Yes
+        - No
 
   - type: textarea
     id: further_information
@@ -198,11 +198,11 @@ body:
       label: "Level of development"
       description: "What is the current development status? (1-5)."
       options: 
-        - label: "1. first draft (pre-alpha)"
-        - label: "2. essential functions (alpha)"
-        - label: "3. not yet fully tested (beta)"
-        - label: "4. All functions preserved, possibly containing errors (Release Candidate - RC) "
-        - label: "5. ready for productive use (released)"
+        - 1. first draft (pre-alpha)
+        - 2. essential functions (alpha)
+        - 3. not yet fully tested (beta)
+        - 4. All functions preserved, possibly containing errors (Release Candidate - RC)
+        - 5. ready for productive use (released)
 
   - type: input
     id: programming_language
