@@ -11,7 +11,7 @@ body:
   - type: textarea
     id: dataset_name
     attributes:
-      label: "Name of the Datasets"
+      label: "1. Name of the Datasets"
       description: "Please provide the name of Datasets."
       placeholder: "e.g., AlphaBuilding - Synthetischer Gebäudebetriebsdatensatz"
     validations:
@@ -20,7 +20,7 @@ body:
   - type: input
     id: use_case_category
     attributes:
-      label: "Use Case Category (Scope)"
+      label: "2. Use Case Category (Scope)"
       description: "What kind of use cases(application area) are the data applied to?"
       placeholder: "e.g., Time Series Data or Geodata"
     validations:
@@ -29,81 +29,81 @@ body:
   - type: input
     id: data_category
     attributes:
-      label: "Category Data (Dataset)"
+      label: "3. Category Data (Dataset)"
       description: "Further refinement of data, describing data format. Not always applicable."
       placeholder: "e.g., Demand or synthetic data"
 
   - type: input
     id: availability
     attributes:
-      label: "Availability"
+      label: "4. Availability"
       description: "Under what license is the data available?"
       placeholder: "e.g., Open"
 
   - type: input
     id: geographic_coverage
     attributes:
-      label: "Geographic Coverage"
+      label: "5. Geographic Coverage"
       description: "Which geographic areas are covered? Not always applicable."
       placeholder: "e.g., Global, Europe, Asia, Germany"
 
   - type: textarea
     id: resolution
     attributes:
-      label: "Resolution"
+      label: "6. Resolution"
       description: "Which spatial or temporal resolution is applied for the dataset?"
       placeholder: "e.g., 1km spatial resolution, daily time resolution"
 
   - type: input
     id: data_source
     attributes:
-      label: "Data Source"
+      label: "7. Data Source"
       description: "Is the dataset part of a larger collection? If so, which?"
       placeholder: "e.g., SMARD"
   
   - type: input
     id: reference
     attributes:
-      label: "Reference"
+      label: "8. Reference"
       description: "Where does the dataset originate from?"
       placeholder: "e.g., DOI"
   
   - type: input
     id: short_description
     attributes:
-      label: "Short Description"
+      label: "9. Short Description"
       description: "Briefly describe the dataset (2-3 sentences)."
       placeholder: "e.g., Contains information about typical consumption of DHW in residential buildings in Germany."
 
   - type: dropdown
     id: includesNonResidential
     attributes:
-      label: "IncludesNonResidential"
+      label: "10. IncludesNonResidential"
       description: "Is information about non-residential buildings included?"
       options:
         - 'Unknown'
         - 'Yes'
         - 'No'
-      default: 0
+      default: 'Unknown'
 
   - type: input
     id: last_update
     attributes:
-      label: "Last Update"
+      label: "11. Last Update"
       description: "Provide the date of the latest update for this dataset."
       placeholder: "e.g., 2024-10-21 or ongoing"
 
   - type: textarea
     id: further_information
     attributes:
-      label: "Further Information"
+      label: "12. Further Information"
       description: "Any further relevant details or references about the dataset."
       placeholder: "e.g., Link to documentation or additional resources"
 
   - type: textarea
     id: Suggestion
     attributes:
-      label: "Suggestion about this questionnaire"
+      label: "13. Suggestion about this questionnaire"
       description: "Please feel free to write any suggestion about this questionaire if be confused about questions."
       placeholder: "e.g., Do not understand the question of [], ..."
 
@@ -115,6 +115,9 @@ body:
   - type: markdown
     attributes:
       value: "**Note:** Please ensure that the data is correctly formatted before submission."
+  
+
+
   
 
 
