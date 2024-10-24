@@ -1,161 +1,120 @@
-name: "Protocolls Data Contribution"
-description: "Template for submitting data about protocols"
-title: "[ContributionProtocol]: <title>"
-labels: ["Protocol Contribution", "Contribution", "Data"]
+name: "Datasets Contribution"
+description: "Template for submitting data of Datasets"
+title: "[ContributionDatasets]: <title>"
+labels: ["Datasets Contribution", "Contribution", "Data"]
 body:
   - type: markdown
     attributes:
       value: |
         ## Thanks for taking the time to fill out this data contribution questionnaire!
 
-  - type: input
-    id: protocol_name
+  - type: textarea
+    id: dataset_name
     attributes:
-      label: "Name of the Protocol"
-      description: "Please provide the name of the protocol."
-      placeholder: "e.g., BACnet"
-
-  - type: dropdown
-    id: transmission_media
-    attributes:
-      label: "Transmission Media"
-      description: "How are data transmitted between the different components and devices within the system (wired, wireless, or both)?"
-      options:
-        - wired
-        - wireless
-        - wired & wireless
+      label: "Name of the Datasets"
+      description: "Please provide the name of Datasets."
+      placeholder: "e.g., AlphaBuilding - Synthetischer Gebäudebetriebsdatensatz"
+    validations:
+      required: true
 
   - type: input
-    id: supported_transmission_media
+    id: use_case_category
     attributes:
-      label: "Supported Transmission Media"
-      description: "How are signals transmitted (e.g., Twisted pair, fiber optics, Wireless mesh)?"
-      placeholder: "e.g., Fiber optics, ..."
+      label: "Use Case Category (Scope)"
+      description: "What kind of use cases(application area) are the data applied to?"
+      placeholder: "e.g., Time Series Data or Geodata"
+    validations:
+      required: true
+
+  - type: input
+    id: data_category
+    attributes:
+      label: "Category Data (Dataset)"
+      description: "Further refinement of data, describing data format. Not always applicable."
+      placeholder: "e.g., Demand or synthetic data"
+
+  - type: input
+    id: availability
+    attributes:
+      label: "Availability"
+      description: "Under what license is the data available?"
+      placeholder: "e.g., Open"
+
+  - type: input
+    id: geographic_coverage
+    attributes:
+      label: "Geographic Coverage"
+      description: "Which geographic areas are covered? Not always applicable."
+      placeholder: "e.g., Global, Europe, Asia, Germany"
 
   - type: textarea
-    id: related_standards
+    id: resolution
     attributes:
-      label: "Related Standards"
-      description: "Specify the standards to which the protocol can be assigned (e.g., IEEE, ISO)."
-      placeholder: "e.g., ISO-16484-6, ..."
+      label: "Resolution"
+      description: "Which spatial or temporal resolution is applied for the dataset?"
+      placeholder: "e.g., 1km spatial resolution, daily time resolution"
 
-  - type: checkboxes
-    id: open_source_status
+  - type: input
+    id: data_source
     attributes:
-      label: "Open-Source Status"
-      description: "Is the protocol public and freely available?"
-      options:
-        - label: "Open Source"
-        - label: "Proprietary"
+      label: "Data Source"
+      description: "Is the dataset part of a larger collection? If so, which?"
+      placeholder: "e.g., SMARD"
+  
+  - type: input
+    id: reference
+    attributes:
+      label: "Reference"
+      description: "Where does the dataset originate from?"
+      placeholder: "e.g., DOI"
+  
+  - type: input
+    id: short_description
+    attributes:
+      label: "Short Description"
+      description: "Briefly describe the dataset (2-3 sentences)."
+      placeholder: "e.g., Contains information about typical consumption of DHW in residential buildings in Germany."
 
   - type: dropdown
-    id: license_fee
+    id: includesNonResidential
     attributes:
-      label: "License Fee"
-      description: "Is there a fee for using the protocol or certification?"
+      label: "IncludesNonResidential"
+      description: "Is information about non-residential buildings included?"
       options:
-        - unknown
-        - Fee required
-        - No fee required
-
-  - type: input
-    id: network_topology
-    attributes:
-      label: "Network Topology"
-      description: "What is the physical and logical arrangement of devices in the network?"
-      placeholder: "e.g., star, ..."
-
-  - type: textarea
-    id: implemented_security_mechanisms
-    attributes:
-      label: "Implemented Security Mechanisms"
-      description: "What security mechanisms are implemented to ensure data security?"
-
-  - type: input
-    id: bandwidth
-    attributes:
-      label: "Bandwidth"
-      description: "What is the communication channel capacity (bandwidth) for transmitting data between the various components of the system?"
-      placeholder: "e.g., 100 Mbps"
-
-  - type: input
-    id: frequency
-    attributes:
-      label: "Frequency"
-      description: "What frequency or wavelength is used for communication (in wireless systems)?"
-      placeholder: "e.g., 2.4 GHz or Not applicable"
-
-  - type: input
-    id: range
-    attributes:
-      label: "Range"
-      description: "the maximum distance over which communication can be maintained between the various devices and components of the system without the signal strength becoming too weak."
-      placeholder: "e.g., 50 meters"
-
-  - type: checkboxes
-    id: implemented_osi_layer
-    attributes:
-      label: "Implemented OSI-layer"
-      description: "Which OSI reference model layers are applied for communication between the various components of the system in the protocol? Multiple choices allowed."
-      options: 
-        - label: "Application layer"
-        - label: "Presentation layer"
-        - label: "Session layer"
-        - label: "Transport layer"
-        - label: "Network/Packet layer"
-        - label: "Data Link layer"
-        - label: "Physical layer"
-
-  - type: checkboxes
-    id: levels_of_building_automation
-    attributes:
-      label: "Levels of Building Automation"
-      description: "Describe the hierarchical structure for building automation system where the protocol is applied. Multiple choices allowed."
-      options: 
-        - label: "field level"
-        - label: "automation level"
-        - label: "management level"
-
-  - type: input
-    id: data_model_architecture
-    attributes:
-      label: "Data Model Architecture"
-      description: "How is information or attributes added to an object in the system?"
-
-  - type: dropdown
-    id: discovery
-    attributes:
-      label: "Discovery"
-      description: "Does the protocol has the “discovery” function to automatically identify devices during data transfer?"
-      options:
+        - 'Unknown'
         - 'Yes'
         - 'No'
+      default: 'Unknown'
 
-  - type: dropdown
-    id: multi_master
+  - type: input
+    id: last_update
     attributes:
-      label: "Multi Master"
-      description: "Can multiple master devices operate simultaneously?"
-      options:
-        - 'Yes'
-        - 'No'
-
-  - type: textarea
-    id: priority
-    attributes:
-      label: "Priority"
-      description: "How are changes or updates managed within the protocol (priority handling)?"
-      placeholder: "e.g., Priority-based scheduling"
+      label: "Last Update"
+      description: "Provide the date of the latest update for this dataset."
+      placeholder: "e.g., 2024-10-21 or ongoing"
 
   - type: textarea
-    id: typical_application
+    id: further_information
     attributes:
-      label: "Typical Application"
-      description: "If applicable, provide an example of how the protocol is used in a real-world scenario."
-      placeholder: "e.g., Used in building management systems"
+      label: "Further Information"
+      description: "Any further relevant details or references about the dataset."
+      placeholder: "e.g., Link to documentation or additional resources"
 
   - type: textarea
-    id: link
+    id: Suggestion
     attributes:
-      label: "Link"
-      description: "Please provide a link for further information about the protocol."
+      label: "Suggestion about this questionnaire"
+      description: "Please feel free to write any suggestion about this questionaire if be confused about questions."
+      placeholder: "e.g., Do not understand the question of [], ..."
+
+  - type: markdown
+    attributes:
+      value: |
+        ## You have finished all the questions! Thank you so much for the data contribution!
+
+  - type: markdown
+    attributes:
+      value: "**Note:** Please ensure that the data is correctly formatted before submission."
+  
+
+
