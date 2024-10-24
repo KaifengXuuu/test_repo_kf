@@ -84,7 +84,7 @@ body:
         - 'Unknown'
         - 'Yes'
         - 'No'
-      default: 'Unknown'
+      default: 1
 
   - type: input
     id: last_update
