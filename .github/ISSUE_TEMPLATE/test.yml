@@ -84,7 +84,7 @@ body:
         - 'Unknown'
         - 'Yes'
         - 'No'
-      default: 'Unknown'
+      default: 0
 
   - type: input
     id: last_update
@@ -116,6 +116,7 @@ body:
     attributes:
       value: "**Note:** Please ensure that the data is correctly formatted before submission."
   
+
 
 
   
