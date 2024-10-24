@@ -25,19 +25,19 @@ To start all needed services, networks, and volumes Docker-compose can be used. 
 ```
    cp .env.example .env
 ```
-1. Execute the command `npm install` to install the `node.js`-dependencies these are used to transpile the `scss`-stylesheets into a bundled `css`-stylesheet.
-1. To build the development environment execute:
+2. Execute the command `npm install` to install the `node.js`-dependencies these are used to transpile the `scss`-stylesheets into a bundled `css`-stylesheet.
+3. To build the development environment execute:
 ```
     ./run build_initial dev
 ```
-1. In the `Wissensplattform` images like logos of in the database included tools, are not located in the repository. These files have to be downloaded from the following link `https://tubcloud.tu-berlin.de/f/3546499069`. The `media`-folder has to be copied to `webcentral/src/`.
-1. Start the setup process by calling the run script with the argument `up_initial` and providing a database dump file.
+4. In the `Wissensplattform` images like logos of in the database included tools, are not located in the repository. These files have to be downloaded from the following link `https://tubcloud.tu-berlin.de/f/3546499069`. The `media`-folder has to be copied to `webcentral/src/`.
+5. Start the setup process by calling the run script with the argument `up_initial` and providing a database dump file.
 ```
   ./run up_initial dev postgres/webcentral_db_20240910_rm_session_data.sql
 ```
 If the app should is to be started in production-mode, SSL-certificates need to be provided to the `nginx`-instance. The files need to be put into the `proxy/conf/`-folder. If the `conf/`-folder does not exist, it needs to be created. The filename of the SSL-Certificate and the SSL-Certificate Key need to be placed inside the `NGINX_SSL_CERTIFICATE_FILENAME` and `NGINX_SSL_CERTIFICATE_KEY_FILENAME` respectivly. 
 
-1. After that, the `run`-script can be used to start the project.
+6. After that, the `run`-script can be used to start the project.
 
 For the development-mode use:
 
@@ -94,8 +94,29 @@ After that, restart the app from the first terminal by pressing `CTRL+C` and run
 
 ## Style Guide
 
-The Style guide for the project can be viewed [here](./styleGuide.md).
+The Style guide for the project can be viewed [here](./styleGuide.md).   
 
+# How to Contribute:
+
+We welcome data contributions to our database system! To ensure consistency and ease of use, we have created specific templates for various types of data contributions. By following the instructions and using the appropriate template, you help us maintain high-quality data for everyone. Below are the steps to contribute your data, as well as the different types of contributions we accept.
+
+1. **Select the Appropriate Template**:  
+   We have prepared several templates depending on the type of data you wish to contribute:
+   - **Datasets Contribution**: For contributing datasets related to environmental, climate, or any other scientific data. For further information, please visit our website of [Datasets](https://wissen-digital-ewb.de/en/dataset_list/).
+   - **Norm Data Contribution**: For contributing information about standards and norms. For further information, please visit our website of [Norms](https://wissen-digital-ewb.de/en/TechnicalStandards/norm).
+   - **Protocol Data Contribution**: For contributing details on communication protocols used in systems. For further information, please visit our website of [Protocols](https://wissen-digital-ewb.de/en/TechnicalStandards/protocol).
+   - **Weather Data Contribution**: For contributing weather-related datasets or applications. For further information, please visit our website of [Weather Data](https://wissen-digital-ewb.de/en/weatherdata_list/).
+   - **Tools/Application Data Contribution**: For contributing information about applications and tools that are used in data processing or analysis. For further information, please visit our website of [Digital Tools](https://wissen-digital-ewb.de/en/tool_list/) and [Digital Applications](https://wissen-digital-ewb.de/en/tool_list/technicalApps/).
+   
+   Each template can be found under the "Issues" section of this repository.
+
+2. **Fill in the Template**:  
+   Click on ["New Issue"](https://github.com/TUB-DVG/wissen-digital-ewb/issues/new/choose) under the "Issues" section, and select the appropriate template for your data contribution. Each template is designed with specific questions and required fields. Please provide as much detail as possible and ensure that your data is accurate and up-to-date..
+
+3. **Submit Your Contribution**:  
+   Once you have filled out the template, click "Submit" to send your contribution for review. Our team will review the submission and contact you if any additional information is needed.
+
+Thank you for helping us build a robust and comprehensive database system! If you have any questions regarding the contribution process, feel free to [open an issue](https://github.com/TUB-DVG/wissen-digital-ewb/issues/new/choose).
 # Hosted 
 
 [wissen-digital-ewb.de](https://wissen-digital-ewb.de)
